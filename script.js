@@ -16,10 +16,13 @@
      screen.value = screenValue;
    }
    else if(buttonText=='='){
+    if(!screenValue)
+        return;
      screen.value = eval(screenValue);
+     screenValue = screen.value;
    }
    else{
-     screenValue+=buttonText;
+     screenValue += buttonText;
      screen.value = screenValue;
    }
   });
